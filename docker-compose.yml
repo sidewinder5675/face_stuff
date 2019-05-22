@@ -1,0 +1,11 @@
+version: '2.3'
+
+services:
+  face_recognition:
+    container_name: face_recognition
+    network_mode: host
+    privileged: true
+    build:
+      context: .
+    devices:
+      - /dev/video0:/dev/video0
